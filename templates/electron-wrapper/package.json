@@ -1,0 +1,38 @@
+{
+  "name": "html-wrapper-template",
+  "version": "1.0.0",
+  "description": "用于承载静态站点的 Electron 外壳模板",
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron .",
+    "build:win": "electron-builder --win portable",
+    "build:mac": "electron-builder --mac dmg"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron-builder": "^24.13.3",
+    "electron": "33.0.0"
+  },
+  "build": {
+    "appId": "com.htmlwrapper.app",
+    "productName": "HtmlWrapperApp",
+    "directories": {
+      "output": "build-output"
+    },
+    "files": [
+      "main.js",
+      "config.json",
+      "build/**/*",
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.png"
+    }
+  }
+}
