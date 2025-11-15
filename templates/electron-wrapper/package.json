@@ -4,13 +4,10 @@
   "description": "用于承载静态站点的 Electron 外壳模板",
   "main": "main.js",
   "scripts": {
-    "dev": "electron .",
-    "build:win": "electron-builder --win portable",
-    "build:mac": "electron-builder --mac dmg"
+    "dev": "electron ."
   },
   "dependencies": {},
   "devDependencies": {
-    "electron-builder": "^24.13.3",
     "electron": "33.0.0"
   },
   "build": {
@@ -26,6 +23,8 @@
       "dist/**/*",
       "package.json"
     ],
+    "npmRebuild": false,
+    "buildDependenciesFromSource": false,
     "win": {
       "target": "portable",
       "icon": "build/icon.png"
